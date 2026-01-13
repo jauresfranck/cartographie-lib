@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: API Ferroviaire REST
+  description: Interface entre l'Application Usager et le Gestionnaire
+  version: 1.0.0
+
+paths:
+  /trajets:
+    get:
+      summary: Rechercher des trajets disponibles
+      parameters:
+        - name: depart
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: arrivee
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Liste des trajets
+
+  /reservations:
+    post:
+      summary: Effectuer une réservation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                idTrajet:
+                  type: string
+                idUsager:
+                  type: string
+                typePlace:
+                  type: string
+                  enum: [Fenetre, Couloir]
+      responses:
+        '201':
+          description: Réservation créée
+
+  /usagers:
+    post:
+      summary: Créer un compte usager
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nom:
+                  type: string
+                email:
+                  type: string
+      responses:
+        '201':
+          description: Compte créé
