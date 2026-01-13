@@ -9,7 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>cartographie_lib</module>
         <module>cartographie-lib</module>
         <module>gestion-app</module>
         <module>usager-app</module>
