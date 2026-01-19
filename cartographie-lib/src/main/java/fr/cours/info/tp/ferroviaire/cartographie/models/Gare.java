@@ -8,7 +8,7 @@ public class Gare {
     }
 
     public void setNombreQuais(int nombreQuais) {
-        this.nombreQuais = nombreQuais;
+        this.nombreQuais = nombreQuais;}
 
     private String nom;
 
