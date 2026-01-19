@@ -1,0 +1,88 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Ferroviaire",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/gares": {
+      "get": {
+        "summary": "Lister les gares",
+        "operationId": "getGares",
+        "responses": {
+          "200": {
+            "description": "Liste des gares",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Gare"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/train/consulter": {
+      "get": {
+        "summary": "Consulter un train par son matricule",
+        "operationId": "consulterTrain",
+        "parameters": [
+          {
+            "name": "matricule",
+            "in": "query",
+            "description": "Le matricule du train recherché",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Le train correspondant",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Train"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Gare": {
+        "type": "object",
+        "properties": {
+          "nom": {
+            "type": "string"
+          },
+          "nombreQuais": {
+            "type": "integer"
+          }
+        }
+      },
+      "Train": {
+        "type": "object",
+        "properties": {
+          "matricule": {
+            "type": "string"
+          },
+          "wagons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

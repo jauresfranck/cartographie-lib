@@ -1,0 +1,54 @@
+openapi: 3.0.3
+info:
+  description: "API REST pour la gestion des trains, gares et la recherche de trajets."
+  title: API Ferroviaire - Gestionnaire & Usager
+  version: 1.0.0
+servers:
+- description: Serveur de développement local
+  url: http://localhost:8080
+paths:
+  /trains/{matricule}:
+    get:
+      operationId: getTrainByMatricule
+      parameters:
+      - description: "Le matricule unique du train (ex: TER-123)"
+        explode: false
+        in: path
+        name: matricule
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Train'
+          description: Détails du train trouvés
+        "404":
+          description: Train non trouvé
+      summary: Obtenir les informations d'un train
+      x-accepts: application/json
+components:
+  schemas:
+    Train:
+      example:
+        matricule: TGV-8921
+        vitesseMax: 320
+        type: TGV
+      properties:
+        matricule:
+          example: TGV-8921
+          type: string
+        type:
+          enum:
+          - TER
+          - TGV
+          example: TGV
+          type: string
+        vitesseMax:
+          example: 320
+          type: integer
+      type: object
+
