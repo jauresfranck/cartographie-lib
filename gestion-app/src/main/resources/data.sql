@@ -1,0 +1,1 @@
+INSERT INTO gare (id, nom, nombre_quais) VALUES (1, 'Le Mans', 12);
