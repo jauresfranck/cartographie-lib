@@ -13,9 +13,10 @@ public class TrainController {
     @Autowired
     private TrainService service;
 
-    // Si TrainApi.PATH_CONSULTER_TRAIN n'est pas trouvé, mettez "/train/consulter"
     @GetMapping("/train/consulter")
     public Train consulterTrain(@RequestParam(value = "matricule", required = true) String matricule) {
-        return service.creer(matricule);
+        // C'EST ICI QUE ÇA CHANGE :
+        // On appelle la recherche en base de données (rechercher) au lieu de la création fictive (creer)
+        return service.rechercher(matricule);
     }
 }
