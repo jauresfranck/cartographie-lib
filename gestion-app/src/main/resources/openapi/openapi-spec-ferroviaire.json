@@ -1,0 +1,139 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "API Ferroviaire",
+    "description": "API pour la gestion du réseau ferroviaire (TP API et outillage)",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/train/consulter": {
+      "get": {
+        "summary": "Consulter un train par son matricule",
+        "operationId": "consulterTrain",
+        "parameters": [
+          {
+            "name": "matricule",
+            "in": "query",
+            "description": "Le matricule unique du train",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Train trouvé avec succès",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Train"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Train non trouvé"
+          }
+        }
+      }
+    },
+    "/trains": {
+      "get": {
+        "summary": "Liste des trains",
+        "responses": {
+          "200": {
+            "description": "Opération réussie",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Train"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reservations": {
+      "post": {
+        "summary": "Créer une réservation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Reservation"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Réservation créée"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Train": {
+        "required": [
+          "matricule"
+        ],
+        "type": "object",
+        "properties": {
+          "matricule": {
+            "type": "string",
+            "description": "Identifiant unique du train"
+          },
+          "vitesseMax": {
+            "type": "integer",
+            "description": "Vitesse maximale autorisée"
+          },
+          "wagons": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Wagon"
+            }
+          }
+        }
+      },
+      "Wagon": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "capacite": {
+            "type": "integer"
+          }
+        }
+      },
+      "Reservation": {
+        "required": [
+          "id",
+          "nomPassager"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nomPassager": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

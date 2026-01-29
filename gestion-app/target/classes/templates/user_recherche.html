@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Portail Voyageur - SNCF</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding-top: 80px; }
+        .container { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); width: 450px; text-align: center; }
+        .logo { font-size: 2.5rem; margin-bottom: 10px; }
+        h1 { color: #1a202c; margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 600; }
+        .search-group { display: flex; gap: 10px; margin-bottom: 20px; }
+        input { flex: 1; padding: 12px; border: 2px solid #e2e8f0; border-radius: 8px; outline: none; transition: border 0.3s; }
+        input:focus { border-color: #2b6cb0; }
+        button { background: #27ae60; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+        button:hover { background: #219150; }
+        .result-box { text-align: left; background: #f8fafc; padding: 20px; border-radius: 10px; border-left: 5px solid #2b6cb0; margin-top: 10px; }
+        .result-box p { margin: 8px 0; color: #4a5568; }
+        .error { color: #e53e3e; font-size: 0.95rem; margin-top: 15px; padding: 10px; background: #fff5f5; border-radius: 5px; }
+        .footer-link { margin-top: 25px; display: block; color: #718096; text-decoration: none; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logo">🚄</div>
+    <h1>Suivi de mon train</h1>
+
+    <form action="/user/recherche" method="get" class="search-group">
+        <input type="text" name="matricule" th:value="${param.matricule}" placeholder="N° de train (ex: T123)" required>
+        <button type="submit">OK</button>
+    </form>
+
+    <div th:if="${train}" class="result-box">
+        <p><strong>Identifiant :</strong> <span th:text="${train.matricule}"></span></p>
+        <p><strong>Type de train :</strong> <span th:text="${train.modele}"></span></p>
+        <p><strong>Composition :</strong> <span th:text="${train.nombreDeVoitures}"></span> voitures</p>
+    </div>
+
+    <p th:if="${erreur}" class="error" th:text="${erreur}"></p>
+
+    <a href="/ihm/trains" class="footer-link">Accès Gestionnaire</a>
+</div>
+</body>
+</html>

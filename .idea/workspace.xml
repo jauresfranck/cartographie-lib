@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a11e8b02-5890-47c1-8630-236996a391a7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/TrainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/TrainService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/TrainViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/bdd/models/GareDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/bdd/models/TrainDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/bdd/repositories/GareRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/bdd/repositories/TrainRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/user/TrainUserRestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/java/fr/cours/info/tp/ferrovaire/user/TrainUserViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/resources/templates/ihm_liste_trains.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/main/resources/templates/user_recherche.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-app/src/test/java/fr/cours/info/tp/ferrovaire/TrainServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartographie-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cartographie-lib/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cartographie-lib/src/main/java/fr/cours/info/tp/ferroviaire/cartographie/models/Gare.java" beforeDir="false" afterPath="$PROJECT_DIR$/cartographie-lib/src/main/java/fr/cours/info/tp/ferroviaire/cartographie/models/Gare.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/cartographie-lib" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="37fxOShkAKkdCSC0QLtUgFj1PQr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/S7 INFO/tp_outillage&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\S7 INFO\tp_outillage\cartographie-lib" />
+      <recent name="C:\S7 INFO\tp_outillage\.idea" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a11e8b02-5890-47c1-8630-236996a391a7" name="Changes" comment="" />
+      <created>1767307895789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1767307895789</updated>
+      <workItem from="1767391010337" duration="425000" />
+      <workItem from="1767950445695" duration="1525000" />
+      <workItem from="1768237271525" duration="611000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

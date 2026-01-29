@@ -1,0 +1,13 @@
+# On ignore le dossier où Maven met les fichiers compilés
+target/
+
+# On ignore les fichiers de configuration de l'IDE IntelliJ
+.idea/
+*.iml
+
+# On ignore les fichiers de configuration Maven
+.mvn/
+
+# On ignore les fichiers temporaires
+.DS_Store
+Thumbs.db

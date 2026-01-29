@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails du Train</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 350px; border-top: 5px solid #2c3e50; }
+        h1 { color: #2c3e50; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
+        .info-group { margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        .label { font-weight: bold; color: #7f8c8d; font-size: 0.9rem; text-transform: uppercase; }
+        .value { color: #2980b9; font-size: 1.1rem; display: block; margin-top: 0.2rem; }
+        .back-link { margin-top: 20px; color: #7f8c8d; text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { color: #2c3e50; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Fiche Technique Train</h1>
+
+    <div class="info-group">
+        <span class="label">Matricule</span>
+        <span class="value" th:text="${train.matricule}">T-000</span>
+    </div>
+
+    <div class="info-group">
+        <span class="label">Modèle</span>
+        <span class="value" th:text="${train.modele}">Modèle inconnu</span>
+    </div>
+
+    <div class="info-group">
+        <span class="label">Nombre de voitures</span>
+        <span class="value" th:text="${train.nombreDeVoitures}">0</span>
+    </div>
+</div>
+
+<a href="/ihm/trains" class="back-link">← Retour à la liste complète</a>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionnaire - Liste des Trains</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; padding: 40px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        h1 { color: #2c3e50; margin-top: 0; display: flex; justify-content: space-between; align-items: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { text-align: left; color: #95a5a6; text-transform: uppercase; font-size: 0.85rem; padding: 15px; border-bottom: 2px solid #f4f7f6; }
+        td { padding: 15px; border-bottom: 1px solid #f4f7f6; color: #2c3e50; }
+        tr:hover { background-color: #fcfdfd; }
+        .btn-view { background-color: #3498db; color: white; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; transition: 0.3s; }
+        .btn-view:hover { background-color: #2980b9; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🚉 Parc Ferroviaire</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Matricule</th>
+            <th>Modèle</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="t : ${liste}">
+            <td style="font-weight: bold;" th:text="${t.matricule}">T123</td>
+            <td th:text="${t.modele}">Corail</td>
+            <td>
+                <a class="btn-view" th:href="@{/ihm/train(matricule=${t.matricule})}">Détails</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
