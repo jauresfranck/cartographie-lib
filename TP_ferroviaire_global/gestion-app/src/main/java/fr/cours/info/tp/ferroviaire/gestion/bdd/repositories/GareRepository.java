@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface GareRepository extends CrudRepository<GareDAO, Long> {
+    GareDAO findByNom(String nom);
 }

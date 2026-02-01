@@ -6,9 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cartographie-lib (1)" />
+        <module name="cartographie-lib" />
+        <module name="gestion-app (1)" />
+        <module name="usager-app (1)" />
         <module name="gestion-app" />
         <module name="usager-app" />
-        <module name="cartographie-lib" />
       </profile>
     </annotationProcessing>
   </component>
