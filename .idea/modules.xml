@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TP_ferroviaire_global/gestion-app/gestion-app.iml" filepath="$PROJECT_DIR$/TP_ferroviaire_global/gestion-app/gestion-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP_ferroviaire_global/usager-app/usager-app.iml" filepath="$PROJECT_DIR$/TP_ferroviaire_global/usager-app/usager-app.iml" />
     </modules>
   </component>
 </project>

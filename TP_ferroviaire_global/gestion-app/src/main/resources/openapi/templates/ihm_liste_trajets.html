@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Trajets</title>
+    <style>
+        table { border-collapse: collapse; width: 50%; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+<h1>Tableau de bord des Trajets</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Départ</th>
+        <th>Arrivée</th>
+        <th>Distance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="t : ${trajets}">
+        <td th:text="${t.villeDepart}"></td>
+        <td th:text="${t.villeArrivee}"></td>
+        <td th:text="${t.distance} + ' km'"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

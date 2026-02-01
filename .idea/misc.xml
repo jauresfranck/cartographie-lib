@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/TP_ferroviaire_global/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/usager-app/pom.xml" />
+        <option value="$PROJECT_DIR$/TP_ferroviaire_global/usager-app/pom.xml" />
       </list>
     </option>
   </component>
