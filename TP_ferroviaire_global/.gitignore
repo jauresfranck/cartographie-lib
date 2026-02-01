@@ -1,0 +1,14 @@
+# Répertoires de compilation
+*.class
+target/
+
+
+# Configuration IDE
+.idea/
+*.iml
+*.iws
+mvn/
+
+
+
+.DS_Store
