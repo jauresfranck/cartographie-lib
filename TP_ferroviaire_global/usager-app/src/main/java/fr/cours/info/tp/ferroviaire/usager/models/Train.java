@@ -3,7 +3,7 @@ package fr.cours.info.tp.ferroviaire.usager.models;
 public class Train {
     private String matricule;
 
-    // Constructeur vide indispensable
+    // Constructeur vide
     public Train() {}
 
     public String getMatricule() {

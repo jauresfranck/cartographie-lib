@@ -21,7 +21,7 @@ public class TrainViewController {
         // On récupère le train via le service et on l'ajoute au modèle
         model.addAttribute("train", service.rechercher(matricule));
 
-        // On retourne le nom du fichier HTML
+        // On retourne le nom du fichier html
         return "ihm_train";
     }
 }

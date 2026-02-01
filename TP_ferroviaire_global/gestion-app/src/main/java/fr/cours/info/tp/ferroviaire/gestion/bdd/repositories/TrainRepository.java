@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 @Repository
 public interface TrainRepository extends CrudRepository<TrainDAO, String> {
-    // Spring Data JPA va "écrire" la requête SQL tout seul grâce au nom de la méthode !
+    //  va écrire la requête SQL tout seul grâce au nom de la méthode !
     TrainDAO findByMatricule(String matricule);
 }

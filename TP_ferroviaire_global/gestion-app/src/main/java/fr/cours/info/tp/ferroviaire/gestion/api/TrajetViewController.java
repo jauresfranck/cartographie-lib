@@ -17,7 +17,7 @@ public class TrajetViewController {
         // On ajoute la liste au modèle pour Thymeleaf
         model.addAttribute("trajets", trajetService.recupererTousLesTrajets());
 
-        // On retourne le nom du template (veiller à l'emplacement configurer dans application.properties)
+        // On retourne le nom du template
         return "ihm_liste_trajets";
     }
 }

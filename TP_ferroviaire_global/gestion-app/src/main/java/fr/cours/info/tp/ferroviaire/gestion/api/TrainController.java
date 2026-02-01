@@ -20,7 +20,7 @@ public class TrainController {
     @GetMapping("/train/consulter")
     public TrainDAO consulterTrain(
             @RequestParam(value = "matricule", required = true) String matricule) {
-        //on retourne un TrainDAO au lieu d'un Train
+        //on retourne un TrainDAO
         return service.rechercher(matricule);
     }
 }
